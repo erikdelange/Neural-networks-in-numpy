@@ -1,6 +1,6 @@
 # Neural networks in numpy
 
-A neural network can be defined just by using numpy as it is nothing more the some calculus. Using numpy can be helpful when trying to understand how a neural network actually works. This repository provides some hand-crafted examples. I devised them during my studies. When actually building a network I take an easier route using libraries like Keras. 
+A neural network can be defined just by using numpy as it is actually just calculus. Using numpy can be helpful when trying to understand how a neural network actually works. This repository provides some hand-crafted examples. I devised them during my studies. When actually building a network I take an easier route using libraries like Keras. 
 
 #### Datasets
 I assume using supervised learning. For supervised learning datasets are needed which specify inputs and the corresponding outputs. File *dataset.py* contains a number of exercise datasets. The simplest are truth tables for logical functions like XOR. A variant is a 2x2 pixel image which can contain several shapes (here I distinguish vertical, horizontal and diagonal lines). To make life a bit more interesting the images are not only black and white (i.e. 1's and 0's) but can be turned into grayscale images where the colour is a scalar ranging from 0 to 1.
