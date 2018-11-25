@@ -19,3 +19,5 @@ A generic approach - where the number of layers, nodes per layer and activation 
 
 #### Function approximation
 In essence a neural network provides a function approximation where the function can be complex. For a linear function only one node is required. See *linear.py* for the approximation of y = ax + b. For polynomial functions of a degree above 1 we need more nodes. See *cubic.py* for an example of a degree of 3.
+
+![](https://github.com/erikdelange/Neural-networks-in-numpy/blob/master/cubic.png)
