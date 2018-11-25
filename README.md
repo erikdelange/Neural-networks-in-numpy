@@ -11,7 +11,7 @@ For starters I have created a few ready to use networks. A neural network consis
 To avoid that the network can only approximate a linear function transfer or activation functions are needed. A set to use can be found in file *activation.py*.  
 
 #### Training  
-In constrast to the examples above normally training the network is required to determine the weight and bias values. The basic approach how to find these is to do a forward pass through the network and then back-propagate the errors, adjusting weights and biases proportionally. File *xor.py* gives the basic setup how to do this for a two layer network. Note that it does not matter how many nodes per layer there are, the code stays the same. Using the derivative of the activation function might seem confusing. Its importance is to determine the direction of the error so we know how to adjust the weights.
+In contrast to the examples above normally training the network is required to determine the weight and bias values. The basic approach how to find these is to do a forward pass through the network and then back-propagate the errors, adjusting weights and biases proportionally. File *xor.py* gives the basic setup how to do this for a two layer network. Note that it does not matter how many nodes per layer there are, the code stays the same. Using the derivative of the activation function might seem confusing. Its importance is to determine the direction of the error so we know how to adjust the weights.
 
 For a three layer network example see *2x2_image_recognition.py*.
 
