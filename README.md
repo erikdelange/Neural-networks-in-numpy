@@ -18,6 +18,7 @@ For a three layer network example see *2x2_image_recognition.py*.
 A generic approach - where the number of layers, nodes per layer and activation function per layer are not hard-coded but configurable - can be found in *network1.p*. 
 
 #### Function approximation
-In essence a neural network provides a function approximation where the function can be complex. For a linear function only one node is required. See *linear.py* for the approximation of y = ax + b. For polynomial functions of a degree above 1 we need more nodes. See *cubic.py* for an example of a degree of 3.
+In essence a neural network provides a function approximation where the function can be complex. For a linear function only one node is required. See *linear.py* for the approximation of y = ax + b. For polynomial functions of a degree above 1 we need more nodes. See *cubic.py* for an example of a degree of 3. The figure below shows how a neural network with a single hidden layer of 7 nodes can approximate function x^3 + x^2 - x - 4
+ 
 
 ![](https://github.com/erikdelange/Neural-networks-in-numpy/blob/master/cubic.png)
