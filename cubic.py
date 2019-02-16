@@ -9,13 +9,13 @@ np.set_printoptions(formatter={"float": "{: 0.3f}".format}, linewidth=np.inf)
 np.random.seed(1)
 
 x = np.linspace(-5, +5, 1000)
-y = (x ** 3) + 3 * (x ** 2) - 1 * x - 4
+y = x ** 3 - 15 * x
 
-X = x.reshape(-1, 1)
+X = x.reshape(-1, 1)  # from [x] to [1][x]
 Y = y.reshape(-1, 1)
 
 n_input_nodes = 1
-n_hidden_nodes = 7  # the higher the number of notes the better the fit (e.g. try values from 2 to 10)
+n_hidden_nodes = 8  # the higher the number of notes the better the fit (e.g. try values from 2 to 10)
 n_output_nodes = 1
 
 W1 = np.random.normal(size=(n_hidden_nodes, n_input_nodes))  # layer 1 weights
@@ -64,17 +64,17 @@ def train(x, y, iterations=50000, learning_rate=0.001):
     return error
 
 
-error = train(X, Y, iterations=5000, learning_rate=0.2)
+error = train(X, Y, iterations=5000, learning_rate=0.2)  # lower learning rates give a better fit
 
 plt.plot(error)
+plt.title("MSE (mean squared error)")
 plt.xlabel("training iterations")
 plt.ylabel("mse")
 plt.show()
 
 Y_hat = forward(X)
 
-plt.plot(x, y, label="function")
-plt.plot(x, Y_hat.T, label="prediction")
-# plt.ylim((-10, +10))
+plt.plot(x, y, label=r"function: $x^3 - 15x$")
+plt.plot(x, Y_hat.T, label="prediction ({} nodes)".format(n_hidden_nodes))
 plt.legend()
 plt.show()

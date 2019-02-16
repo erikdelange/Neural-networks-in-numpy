@@ -9,24 +9,27 @@ import numpy as np
 np.set_printoptions(formatter={"float": "{: 0.3f}".format}, linewidth=np.inf)
 np.random.seed(1)
 
-X = np.array([[0], [1], [2], [3], [4]])  # input
-Y = 2 * X + 3  # output: y = 2x + 3
+X = np.array([[0], [1], [2], [3], [4]])  # X = input (here: 5 values)
+Y = 2 * X + 3  # Y = output: y = 2x + 3 (as many values as there are X's)
 
-W = np.random.normal(scale=0.1, size=(1, 1))  # layer: 1 node with 1 input
-B = np.random.normal(scale=0.1, size=(1, 1))  # bias: for 1 node (by definition 1 bias)
+W = np.random.normal(scale=0.1, size=(1, 1))  # layer: (1, 1) = 1 node with 1 input
+B = np.random.normal(scale=0.1, size=(1, 1))  # bias: (1, 1) = for 1 node (and by definition only 1 bias value per node)
 
 learning_rate = 0.001
 iterations = 10000
 error = []
 
-print("initial:", "W =", W, "B =", B)
+print("initial :", "W =", W, "B =", B, "(random initialization)")
 
 m = X.shape[0]
 
 for _ in range(iterations):
-    a = W.dot(X.T) + B  # forward pass
-    da = a - Y.T  # back propagation
-    dz = da
+    # forward pass
+    a = W.dot(X.T) + B
+
+    # back propagation
+    da = a - Y.T  # da = error
+    dz = da  # no activation
     dw = dz.dot(X) / m
     db = np.sum(dz, axis=1, keepdims=True) / m
 
@@ -35,9 +38,11 @@ for _ in range(iterations):
 
     error.append(np.average(da ** 2))
 
-print("result :", "W =", W, "B =", B)
+print("result  :", "W =", W, "B =", B, "(after {} iterations)".format(iterations))
+print("expected: W = 2, B = 3")
 
 plt.plot(range(iterations), error)
+plt.title("MSE (mean squared error)")
 plt.xlabel("training iterations")
 plt.ylabel("mse")
 plt.show()

@@ -92,7 +92,7 @@ def image2x2(vertical_only=False):
 
 
 def image2x2_set(no_of_sets=1, vertical_only=False):
-    """ Return one or more sets of grayscale images. Every sets contains all possible shapes (so 16 images). """
+    """ Return one or more sets of grayscale images. Every set contains all possible shapes (so 16 images). """
     grey_range = 0.2
     images = []
     labels = []

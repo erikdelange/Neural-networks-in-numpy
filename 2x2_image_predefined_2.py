@@ -11,7 +11,7 @@ W2 = np.array([[+1, +1]])  # layer 2: 1 node with 2 inputs + bias input
 B1 = np.array([[-1], [-1]])  # bias for nodes in layer 1
 B2 = np.array([[0]])  # bias for nodes in layer 2
 
-X, Y = dataset.image2x2_set(no_of_sets=1, vertical_only=True)
+X, Y = dataset.image2x2_set(no_of_sets=2, vertical_only=True)
 
 a = X.T
 
