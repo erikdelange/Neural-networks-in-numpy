@@ -64,7 +64,7 @@ def train(x, y, iterations=50000, learning_rate=0.001):
     return error
 
 
-error = train(X, Y, iterations=5000, learning_rate=0.2)  # lower learning rates give a better fit
+error = train(X, Y, iterations=10000, learning_rate=0.002)  # lower learning rates give a better fit
 
 plt.plot(error)
 plt.title("MSE (mean squared error)")
