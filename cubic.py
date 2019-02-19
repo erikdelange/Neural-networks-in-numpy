@@ -15,7 +15,7 @@ X = x.reshape(-1, 1)  # from [x] to [1][x]
 Y = y.reshape(-1, 1)
 
 n_input_nodes = 1
-n_hidden_nodes = 8  # the higher the number of notes the better the fit (e.g. try values from 2 to 10)
+n_hidden_nodes = 8  # the higher the number of nodes the better the fit (e.g. try values from 2 to 10)
 n_output_nodes = 1
 
 W1 = np.random.normal(size=(n_hidden_nodes, n_input_nodes))  # layer 1 weights
